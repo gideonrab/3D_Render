@@ -1,0 +1,838 @@
+	section	.text,"ax",@progbits
+	assume	adl = 1
+	section	.text,"ax",@progbits
+	public	__Z9float2strfPc
+__Z9float2strfPc:
+	ld	hl, -12
+	call	__frameset
+	ld	hl, (ix + 6)
+	ld	a, (ix + 9)
+	lea	bc, ix - 9
+	ld	(ix - 12), bc
+	ld	e, a
+	push	de
+	push	hl
+	push	bc
+	call	_os_FloatToReal
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	hl, 8
+	push	hl
+	ld	hl, 1
+	push	hl
+	ld	hl, -1
+	push	hl
+	ld	hl, (ix - 12)
+	push	hl
+	ld	hl, (ix + 12)
+	push	hl
+	call	_os_RealToStr
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	_main
+_main:
+	ld	hl, -181
+	call	__frameset
+	ld	bc, -154
+	lea	iy, ix
+	add	iy, bc
+	ld	de, 4194304
+	lea	bc, ix - 18
+	ld	(ix - 3), de
+	ld	de, -181
+	lea	hl, ix
+	add	hl, de
+	ld	(hl), bc
+	lea	hl, ix - 34
+	push	ix
+	ld	de, -178
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, ix - 82
+	push	ix
+	ld	de, -172
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, ix - 98
+	push	ix
+	ld	de, -175
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, ix - 50
+	push	ix
+	ld	de, -163
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, ix - 114
+	push	ix
+	ld	de, -157
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, ix - 126
+	push	ix
+	ld	de, -169
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, iy + 12
+	push	ix
+	ld	de, -160
+	add	ix, de
+	ld	(ix), hl
+	pop	ix
+	lea	hl, iy
+	ld	de, -166
+	lea	iy, ix
+	add	iy, de
+	ld	(iy), hl
+	ld	hl, 0
+	push	hl
+	push	hl
+	push	hl
+	push	hl
+	ld	hl, -64
+	push	hl
+	ld	de, (ix - 3)
+	push	de
+	push	bc
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	de, 0
+	push	de
+	push	de
+	ld	hl, 63
+	push	hl
+	ld	hl, -8388608
+	push	hl
+	push	de
+	push	de
+	ld	bc, -175
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	bc, -175
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	hl, 63
+	push	hl
+	ld	hl, -3600421
+	push	hl
+	ld	bc, -172
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN12Quaternion3DC1EfRK8Vector3D
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	hl, 63
+	push	hl
+	ld	hl, -8388608
+	push	hl
+	or	a, a
+	sbc	hl, hl
+	push	hl
+	push	hl
+	push	hl
+	push	hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	hl, -65
+	push	hl
+	ld	hl, -3600421
+	push	hl
+	ld	bc, -163
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN12Quaternion3DC1EfRK8Vector3D
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	bc, -163
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -172
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -178
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZmlRK12Quaternion3DS1_
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	hl, 63
+	push	hl
+	ld	hl, 4194304
+	push	hl
+	ld	bc, -178
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -181
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -172
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN8Camera3DC1ERK8Vector3DRK12Quaternion3Df
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	bc, -163
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN12Quaternion3DC1Ev
+	pop	hl
+	ld	hl, 63
+	push	hl
+	ld	hl, -8388608
+	push	hl
+	or	a, a
+	sbc	hl, hl
+	push	hl
+	push	hl
+	push	hl
+	push	hl
+	ld	bc, -169
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	bc, -169
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	hl, 61
+	push	hl
+	ld	hl, -8344067
+	push	hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN12Quaternion3DC1EfRK8Vector3D
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	de, 0
+	push	de
+	push	de
+	ld	hl, 63
+	push	hl
+	ld	hl, -8388608
+	push	hl
+	push	de
+	push	de
+	ld	bc, -166
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	bc, -166
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	hl, 61
+	push	hl
+	ld	hl, -5965487
+	push	hl
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZN12Quaternion3DC1EfRK8Vector3D
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -175
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZmlRK12Quaternion3DS1_
+	pop	hl
+	pop	hl
+	pop	hl
+	call	_gfx_Begin
+	ld	hl, 1
+	push	hl
+	call	_gfx_SetDraw
+	pop	hl
+	or	a, a
+	sbc	hl, hl
+	push	hl
+	call	_gfx_SetColor
+	pop	hl
+BB1_1:
+	ld	hl, -1
+	push	hl
+	call	_gfx_FillScreen
+	pop	hl
+	ld	hl, __ZL11pixelBuffer
+	ld	bc, -166
+	lea	iy, ix
+	add	iy, bc
+	ld	(iy), hl
+	or	a, a
+	sbc	hl, hl
+	ex	de, hl
+	push	de
+	pop	iy
+BB1_2:
+	lea	hl, iy
+	ld	bc, 96
+	or	a, a
+	sbc	hl, bc
+	jq	z, BB1_3
+	lea	bc, iy
+	ld	hl, __ZL10workBuffer
+	add	hl, bc
+	ex	de, hl
+	ld	(ix - 3), bc
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	(hl), de
+	ld	hl, __ZL8vertices
+	ld	bc, (ix - 3)
+	add	hl, bc
+	ld	bc, 12
+	ldir
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -163
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -169
+	lea	hl, ix
+	add	hl, bc
+	ld	(hl), iy
+	call	__ZNK12Quaternion3D6rotateERK8Vector3D
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	iy, (hl)
+	lea	de, iy
+	push	ix
+	ld	bc, -157
+	add	ix, bc
+	ld	hl, (ix)
+	pop	ix
+	ld	bc, 12
+	ldir
+	push	iy
+	ld	bc, -172
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZNK8Camera3D12projectPointER8Vector3D
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	iy, (hl)
+	lea	de, iy
+	push	ix
+	ld	bc, -157
+	add	ix, bc
+	ld	hl, (ix)
+	pop	ix
+	ld	bc, 12
+	ldir
+	ld	bc, (iy)
+	ld	a, (iy + 3)
+	ld	iy, -8388608
+	lea	hl, iy
+	ld	d, 63
+	ld	e, d
+	call	__fadd
+	ld	hl, 2097152
+	ld	e, 67
+	call	__fmul
+	call	__ftol
+	ld	(ix - 3), de
+	ld	de, -166
+	lea	iy, ix
+	add	iy, de
+	ld	hl, (iy)
+	ld	(hl), bc
+	ld	de, -160
+	lea	hl, ix
+	add	hl, de
+	ld	iy, (hl)
+	ld	bc, (iy + 4)
+	lea	iy, ix
+	add	iy, de
+	ld	iy, (iy)
+	ld	a, (iy + 7)
+	ld	hl, -8388608
+	ld	de, (ix - 3)
+	ld	e, d
+	call	__fadd
+	ld	hl, -1048576
+	ld	e, 66
+	call	__fmul
+	ld	de, 0
+	call	__ftol
+	ld	(ix - 3), de
+	ld	de, -166
+	lea	iy, ix
+	add	iy, de
+	ld	iy, (iy)
+	ld	(iy + 3), bc
+	push	ix
+	ld	de, -169
+	add	ix, de
+	ld	hl, (ix)
+	pop	ix
+	ld	bc, 12
+	add	hl, bc
+	push	ix
+	ld	bc, -169
+	add	ix, bc
+	ld	(ix), hl
+	pop	ix
+	lea	iy, iy + 6
+	ld	bc, -166
+	lea	hl, ix
+	add	hl, bc
+	ld	(hl), iy
+	ld	bc, -169
+	lea	iy, ix
+	add	iy, bc
+	ld	iy, (iy)
+	ld	de, (ix - 3)
+	jq	BB1_2
+BB1_3:
+	push	de
+	pop	iy
+BB1_4:
+	lea	hl, iy
+	ld	de, 72
+	or	a, a
+	sbc	hl, de
+	jq	z, BB1_5
+	lea	de, iy
+	ld	hl, __ZL5edges
+	add	hl, de
+	push	ix
+	ld	bc, -160
+	add	ix, bc
+	ld	(ix), hl
+	pop	ix
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	ld	hl, (hl)
+	ld	de, 6
+	push	de
+	pop	bc
+	call	__imulu
+	push	hl
+	pop	de
+	ld	hl, __ZL11pixelBuffer
+	ld	(ix - 3), bc
+	push	ix
+	ld	bc, -166
+	add	ix, bc
+	ld	(ix), iy
+	pop	ix
+	push	hl
+	pop	iy
+	add	iy, de
+	ld	hl, (iy)
+	push	ix
+	ld	bc, -169
+	add	ix, bc
+	ld	(ix), hl
+	pop	ix
+	ld	de, (iy + 3)
+	ld	bc, -160
+	lea	hl, ix
+	add	hl, bc
+	ld	iy, (hl)
+	ld	hl, (iy + 3)
+	ld	bc, (ix - 3)
+	ld	bc, 6
+	call	__imulu
+	push	hl
+	pop	bc
+	ld	iy, __ZL11pixelBuffer
+	add	iy, bc
+	ld	hl, (iy)
+	ld	bc, (iy + 3)
+	push	bc
+	push	hl
+	push	de
+	ld	bc, -169
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	_gfx_Line
+	ld	bc, -166
+	lea	hl, ix
+	add	hl, bc
+	ld	iy, (hl)
+	pop	hl
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	de, 6
+	add	iy, de
+	jq	BB1_4
+BB1_5:
+	call	_gfx_SwapDraw
+	ld	bc, -163
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -175
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	ld	bc, -157
+	lea	hl, ix
+	add	hl, bc
+	ld	hl, (hl)
+	push	hl
+	call	__ZmlRK12Quaternion3DS1_
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	bc, -163
+	lea	hl, ix
+	add	hl, bc
+	ld	de, (hl)
+	ld	bc, -157
+	lea	iy, ix
+	add	iy, bc
+	ld	hl, (iy)
+	ld	bc, 16
+	ldir
+	call	_os_GetCSC
+	or	a, a
+	jq	z, BB1_1
+	call	_gfx_End
+	or	a, a
+	sbc	hl, hl
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	private	__GLOBAL__sub_I_main.cpp
+__GLOBAL__sub_I_main.cpp:
+	ld	hl, -3
+	call	__frameset
+	ld	hl, __ZL8vertices
+	ld	bc, -8388608
+	ld	de, 0
+	ld	(ix - 3), de
+	ld	de, -65
+	push	de
+	push	bc
+	push	de
+	push	bc
+	push	de
+	push	bc
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	hl, 63
+	push	hl
+	ld	de, -8388608
+	push	de
+	ld	hl, -65
+	push	hl
+	push	de
+	push	hl
+	push	de
+	ld	hl, __ZL8vertices+12
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	de, -65
+	push	de
+	ld	hl, -8388608
+	push	hl
+	ld	bc, 63
+	push	bc
+	push	hl
+	push	de
+	push	hl
+	ld	hl, __ZL8vertices+24
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	de, 63
+	push	de
+	ld	hl, -8388608
+	push	hl
+	push	de
+	push	hl
+	ld	de, -65
+	push	de
+	push	hl
+	ld	hl, __ZL8vertices+36
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	de, -65
+	push	de
+	ld	hl, -8388608
+	push	hl
+	push	de
+	push	hl
+	ld	de, 63
+	push	de
+	push	hl
+	ld	hl, __ZL8vertices+48
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	de, 63
+	push	de
+	ld	hl, -8388608
+	push	hl
+	ld	bc, -65
+	push	bc
+	push	hl
+	push	de
+	push	hl
+	ld	hl, __ZL8vertices+60
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	hl, -65
+	push	hl
+	ld	hl, -8388608
+	push	hl
+	ld	de, 63
+	push	de
+	push	hl
+	push	de
+	push	hl
+	ld	hl, __ZL8vertices+72
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+	ld	hl, 63
+	push	hl
+	ld	de, -8388608
+	push	de
+	push	hl
+	push	de
+	push	hl
+	push	de
+	ld	hl, __ZL8vertices+84
+	push	hl
+	call	__ZN8Vector3DC1Efff
+	ld	hl, 21
+	add	hl, sp
+	ld	sp, hl
+BB2_1:
+	ld	de, (ix - 3)
+	ld	hl, __ZL10workBuffer
+	add	hl, de
+	push	hl
+	call	__ZN8Vector3DC1Ev
+	pop	hl
+	ld	de, 12
+	ld	hl, (ix - 3)
+	add	hl, de
+	ld	(ix - 3), hl
+	ld	de, 96
+	or	a, a
+	sbc	hl, de
+	jq	nz, BB2_1
+	pop	hl
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.bss,"aw",@nobits
+	private	__ZL8vertices
+__ZL8vertices:
+	rb	96
+
+	section	.bss,"aw",@nobits
+	private	__ZL10workBuffer
+__ZL10workBuffer:
+	rb	96
+
+	section	.bss,"aw",@nobits
+	private	__ZL11pixelBuffer
+__ZL11pixelBuffer:
+	rb	48
+
+	section	.rodata,"a",@progbits
+	private	__ZL5edges
+__ZL5edges:
+	dl	0
+	dl	1
+	dl	2
+	dl	3
+	dl	0
+	dl	2
+	dl	1
+	dl	3
+	dl	4
+	dl	5
+	dl	6
+	dl	7
+	dl	4
+	dl	6
+	dl	5
+	dl	7
+	dl	0
+	dl	4
+	dl	1
+	dl	5
+	dl	2
+	dl	6
+	dl	3
+	dl	7
+
+	section	.init_array,"aw",@init_array
+	dl	__GLOBAL__sub_I_main.cpp
+	ident	"clang version 14.0.0 (https://github.com/jacobly0/llvm-project a139def90d26173f771eb1eca797633d1fbb2797)"
+	extern	__ZN12Quaternion3DC1EfRK8Vector3D
+	extern	_gfx_FillScreen
+	extern	__Unwind_SjLj_Register
+	extern	__frameset
+	extern	__ZNK12Quaternion3D6rotateERK8Vector3D
+	extern	__Unwind_SjLj_Unregister
+	extern	_os_FloatToReal
+	extern	_gfx_Begin
+	extern	_gfx_SetColor
+	extern	__fadd
+	extern	_gfx_Line
+	extern	__ZN12Quaternion3DC1Ev
+	extern	__imulu
+	extern	__ZN8Vector3DC1Efff
+	extern	__ZmlRK12Quaternion3DS1_
+	extern	_os_GetCSC
+	extern	_os_RealToStr
+	extern	_gfx_End
+	extern	_gfx_SwapDraw
+	extern	__fmul
+	extern	__ftol
+	extern	__ZN8Vector3DC1Ev
+	extern	__ZN8Camera3DC1ERK8Vector3DRK12Quaternion3Df
+	extern	__ZNK8Camera3D12projectPointER8Vector3D
+	extern	_gfx_SetDraw

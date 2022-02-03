@@ -1,0 +1,110 @@
+Section          Base   Top    High   Length
+---------------- ------ ------ ------ -------
+.icon            D1A882 D1A998           116h
+.init.libs       D1A998 D1A9F0            58h
+.libs            D1A9F0 D1AA15            25h
+.init.clock      D1AA15 D1AA15             0h
+.init.reruncheck D1AA15 D1AA15             0h
+.init            D1AA15 D1AA43            2Eh
+.fini            D1AA43 D1AA77            34h
+.text            D1AA77 D1BED5          145Eh
+.data            D1BED5 D1BED5             0h
+.rodata          D1BED5 D1BF3F            6Ah
+.init_array      000000 000003             3h
+.ctors           000000 000000             0h
+.dtors           000000 000000             0h
+.fini_array      000000 000000             0h
+.bss             D052C6 D053B6 D13FD8     F0h
+.header          D1A87F D1A882             3h
+
+Label                                          Value
+--------------------------------------------   ------
+___low_bss                                   = D052C6
+___len_bss                                   = 0000F0
+___heaptop                                   = D13FD8
+___heapbot                                   = D053B6
+___libs                                      = D1A9F0
+___init_array_count                          = 000001
+___ctors_count                               = 000000
+___dtors_count                               = 000000
+___fini_array_count                          = 000000
+__stack                                      = D1A87E
+_frexp                                       = D1AA77
+_frexpf                                      = D1AA93
+_modff                                       = D1AB04
+_sin                                         = D1ABAE
+_sinf                                        = D1ABC4
+_sinus                                       = D1ABDF
+_sqrt                                        = D1AE56
+_cosf                                        = D1AE6C
+_cos                                         = D1AE6C
+_os_DisableHomeTextBuffer                    = D1AE9D
+_os_EnableHomeTextBuffer                     = D1AEAF
+_os_GetCSC                                   = 021D3C
+__fneg                                       = D1AEC1
+__frameset                                   = D1AECE
+__frameset0                                  = D1AEDC
+__fadd                                       = 000270
+__fcmp                                       = 000274
+__fdiv                                       = 000278
+__fmul                                       = 000288
+__fsub                                       = 000290
+__ftol                                       = 00027C
+__iand                                       = 000134
+__imulu                                      = 000158
+__ladd                                       = 00019C
+__land                                       = 0001A4
+__lshl                                       = 0001E4
+__lshrs                                      = 0001E8
+__lsub                                       = 0001F8
+__ltof                                       = 000284
+__setflag                                    = 000218
+_sqrtf                                       = 000298
+.missingappvar                               = D1BED5
+.libloadname                                 = D1BEDA
+.libloadnamelen                              = 000007
+.webaddress                                  = D1BEE2
+__start                                      = D1AA15
+___exithl                                    = D1AA43
+skip._exit                                   = D1AA43
+skip.__Exit                                  = D1AA43
+skip._abort                                  = D1AA43
+_exit.sp                                     = D1AA44
+_exit.flash_wait_states                      = D1AA4E
+__ZN8Camera3DC2Ev                            = D1AEE7
+__ZN8Camera3DC2ERK8Vector3DRK12Quaternion3Df = D1AF4C
+__ZNK8Camera3D14transformPointER8Vector3D    = D1AFA1
+__ZNK8Camera3D12flattenPointER8Vector3D      = D1AFF1
+__ZNK8Camera3D12projectPointER8Vector3D      = D1B06D
+__ZN8Camera3DC1ERK8Vector3DRK12Quaternion3Df = D1AF4C
+__ZN12Quaternion3DC2Ev                       = D1B0A6
+__ZN12Quaternion3DC2Effff                    = D1B0D4
+__ZN12Quaternion3DC2EfRK8Vector3D            = D1B10E
+__ZN12Quaternion3DC2ERK8Vector3D             = D1B1AD
+__ZNK12Quaternion3D10magSquaredEv            = D1B205
+__ZNK12Quaternion3D9conjugateEv              = D1B279
+__ZNK12Quaternion3D7inverseEv                = D1B2E5
+__ZmlfRK12Quaternion3D                       = D1B3CA
+__ZNK12Quaternion3D9getVectorEv              = D1B445
+__ZNK12Quaternion3D6rotateERK8Vector3D       = D1B48D
+__ZmlRK12Quaternion3DS1_                     = D1B51E
+__ZN12Quaternion3DC1Ev                       = D1B0A6
+__ZN12Quaternion3DC1EfRK8Vector3D            = D1B10E
+__ZN8Vector3DC2Ev                            = D1B776
+__ZN8Vector3DC2Efff                          = D1B796
+__ZmiRK8Vector3DS1_                          = D1B7C4
+__ZN8Vector3DC1Ev                            = D1B776
+__ZN8Vector3DC1Efff                          = D1B796
+_main                                        = D1B848
+__GLOBAL__sub_I_main.cpp                     = D1BDA0
+__ZL8vertices                                = D052C6
+__ZL10workBuffer                             = D05326
+__ZL11pixelBuffer                            = D05386
+__ZL5edges                                   = D1BEF7
+_#gfx_Begin                                  = D1A9F9
+_#gfx_End                                    = D1A9FD
+_#gfx_SetColor                               = D1AA01
+_#gfx_FillScreen                             = D1AA05
+_#gfx_SetDraw                                = D1AA09
+_#gfx_SwapDraw                               = D1AA0D
+_#gfx_Line                                   = D1AA11

@@ -1,0 +1,392 @@
+	section	.text,"ax",@progbits
+	assume	adl = 1
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DC2Ev
+__ZN12FixedPoint3DC2Ev:
+	call	__frameset0
+	ld	hl, (ix + 6)
+	ld	de, 0
+	ld	(hl), de
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DC2Ei
+__ZN12FixedPoint3DC2Ei:
+	call	__frameset0
+	ld	iy, (ix + 6)
+	ld	hl, (ix + 9)
+	ld	c, 12
+	call	__ishl
+	ld	(iy), hl
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DC2Ef
+__ZN12FixedPoint3DC2Ef:
+	call	__frameset0
+	ld	iy, (ix + 6)
+	ld	bc, (ix + 9)
+	ld	a, (ix + 12)
+	ld	hl, -8388608
+	ld	e, 69
+	call	__fmul
+	call	__ftol
+	ld	(iy), bc
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DC2Ed
+__ZN12FixedPoint3DC2Ed:
+	call	__frameset0
+	ld	iy, (ix + 6)
+	ld	bc, (ix + 9)
+	ld	a, (ix + 12)
+	ld	hl, -8388608
+	ld	e, 69
+	call	__fmul
+	call	__ftol
+	ld	(iy), bc
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZNK12FixedPoint3D8rawValueEv
+__ZNK12FixedPoint3D8rawValueEv:
+	call	__frameset0
+	ld	hl, (ix + 6)
+	ld	hl, (hl)
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZNK12FixedPoint3D5toIntEv
+__ZNK12FixedPoint3D5toIntEv:
+	call	__frameset0
+	ld	hl, (ix + 6)
+	ld	hl, (hl)
+	ld	c, 12
+	call	__ishrs
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZNK12FixedPoint3D7toFloatEv
+__ZNK12FixedPoint3D7toFloatEv:
+	call	__frameset0
+	ld	hl, (ix + 6)
+	ld	e, 57
+	ld	bc, (hl)
+	push	bc
+	pop	hl
+	push	bc
+	pop	iy
+	add	iy, iy
+	sbc	hl, hl
+	ld	a, l
+	call	__ltof
+	ld	hl, -8388608
+	call	__fmul
+	push	bc
+	pop	hl
+	ld	e, a
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZNK12FixedPoint3D8toStringEPc
+__ZNK12FixedPoint3D8toStringEPc:
+	ld	hl, -12
+	call	__frameset
+	ld	hl, (ix + 6)
+	lea	de, ix - 9
+	ld	(ix - 12), de
+	push	hl
+	call	__ZNK12FixedPoint3D7toFloatEv
+	pop	bc
+	push	de
+	push	hl
+	ld	hl, (ix - 12)
+	push	hl
+	call	_os_FloatToReal
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	hl, 5
+	push	hl
+	dec	hl
+	push	hl
+	ld	hl, -1
+	push	hl
+	ld	hl, (ix - 12)
+	push	hl
+	ld	hl, (ix + 9)
+	push	hl
+	call	_os_RealToStr
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZplRK12FixedPoint3DS1_
+__ZplRK12FixedPoint3DS1_:
+	call	__frameset0
+	ld	hl, (ix + 6)
+	ld	iy, (ix + 9)
+	ld	bc, (ix + 12)
+	ld	de, (iy)
+	push	bc
+	pop	iy
+	ld	iy, (iy)
+	add	iy, de
+	ld	(hl), iy
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZmiRK12FixedPoint3DS1_
+__ZmiRK12FixedPoint3DS1_:
+	call	__frameset0
+	ld	iy, (ix + 6)
+	ld	bc, (ix + 9)
+	ld	hl, (ix + 12)
+	ld	de, (hl)
+	push	bc
+	pop	hl
+	ld	hl, (hl)
+	or	a, a
+	sbc	hl, de
+	ld	(iy), hl
+	lea	hl, iy
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DpLERKS_
+__ZN12FixedPoint3DpLERKS_:
+	call	__frameset0
+	ld	hl, (ix + 6)
+	ld	iy, (ix + 9)
+	ld	de, (iy)
+	ld	iy, (hl)
+	add	iy, de
+	ld	(hl), iy
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DmIERKS_
+__ZN12FixedPoint3DmIERKS_:
+	call	__frameset0
+	ld	iy, (ix + 6)
+	ld	hl, (ix + 9)
+	ld	de, (hl)
+	ld	hl, (iy)
+	or	a, a
+	sbc	hl, de
+	ld	(iy), hl
+	lea	hl, iy
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZmlRK12FixedPoint3DS1_
+__ZmlRK12FixedPoint3DS1_:
+	ld	hl, -12
+	call	__frameset
+	ld	hl, (ix + 9)
+	ld	iy, 4095
+	ld	de, (hl)
+	ld	(ix - 3), de
+	ld	a, 12
+	push	de
+	pop	hl
+	ld	c, a
+	call	__ishrs
+	ld	(ix - 9), hl
+	ex	de, hl
+	lea	de, iy
+	push	de
+	pop	bc
+	call	__iand
+	ld	(ix - 12), hl
+	ld	hl, (ix + 12)
+	ld	iy, (hl)
+	lea	hl, iy
+	ld	c, a
+	call	__ishrs
+	ld	(ix - 6), hl
+	lea	hl, iy
+	push	de
+	pop	bc
+	call	__iand
+	push	hl
+	pop	de
+	ld	bc, (ix - 9)
+	call	__imulu
+	ld	(ix - 9), hl
+	ex	de, hl
+	ld	bc, (ix - 12)
+	call	__imulu
+	ld	c, a
+	call	__ishru
+	push	hl
+	pop	iy
+	ld	hl, (ix - 3)
+	ld	bc, (ix - 6)
+	call	__imulu
+	push	hl
+	pop	de
+	ld	bc, (ix - 9)
+	add	iy, bc
+	add	iy, de
+	ld	hl, (ix + 6)
+	ld	(hl), iy
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZNK12FixedPoint3D7inverseEv
+__ZNK12FixedPoint3D7inverseEv:
+	call	__frameset0
+	ld	iy, (ix + 6)
+	ld	hl, (ix + 9)
+	ld	de, 0
+	ld	hl, (hl)
+	ld	c, 1
+	call	__ishrs
+	push	hl
+	pop	bc
+	ex	de, hl
+	or	a, a
+	sbc	hl, bc
+	push	hl
+	pop	bc
+	ld	hl, -8388608
+	call	__idivs
+	ld	(iy), hl
+	lea	hl, iy
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZdvRK12FixedPoint3DS1_
+__ZdvRK12FixedPoint3DS1_:
+	ld	hl, -3
+	call	__frameset
+	ld	hl, (ix + 12)
+	ld	de, 0
+	ld	iy, -8388608
+	ld	hl, (hl)
+	ld	c, 1
+	call	__ishrs
+	push	hl
+	pop	bc
+	ex	de, hl
+	or	a, a
+	sbc	hl, bc
+	push	hl
+	pop	bc
+	lea	hl, iy
+	call	__idivs
+	ld	(ix - 3), hl
+	pea	ix - 3
+	ld	hl, (ix + 9)
+	push	hl
+	ld	hl, (ix + 6)
+	push	hl
+	call	__ZmlRK12FixedPoint3DS1_
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	hl, (ix + 6)
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DmLERKS_
+__ZN12FixedPoint3DmLERKS_:
+	ld	hl, -3
+	call	__frameset
+	ld	de, (ix + 6)
+	ld	hl, (ix + 9)
+	push	hl
+	push	de
+	pea	ix - 3
+	call	__ZmlRK12FixedPoint3DS1_
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	de, (ix - 3)
+	ld	hl, (ix + 6)
+	ld	(hl), de
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	section	.text,"ax",@progbits
+	public	__ZN12FixedPoint3DdVERKS_
+__ZN12FixedPoint3DdVERKS_:
+	ld	hl, -3
+	call	__frameset
+	ld	de, (ix + 6)
+	ld	hl, (ix + 9)
+	push	hl
+	push	de
+	pea	ix - 3
+	call	__ZdvRK12FixedPoint3DS1_
+	pop	hl
+	pop	hl
+	pop	hl
+	ld	de, (ix - 3)
+	ld	hl, (ix + 6)
+	ld	(hl), de
+	ld	sp, ix
+	pop	ix
+	ret
+	section	.text,"ax",@progbits
+
+	public	__ZN12FixedPoint3DC1Ev
+	label	__ZN12FixedPoint3DC1Ev at __ZN12FixedPoint3DC2Ev
+	public	__ZN12FixedPoint3DC1Ei
+	label	__ZN12FixedPoint3DC1Ei at __ZN12FixedPoint3DC2Ei
+	public	__ZN12FixedPoint3DC1Ef
+	label	__ZN12FixedPoint3DC1Ef at __ZN12FixedPoint3DC2Ef
+	public	__ZN12FixedPoint3DC1Ed
+	label	__ZN12FixedPoint3DC1Ed at __ZN12FixedPoint3DC2Ed
+	ident	"clang version 14.0.0 (https://github.com/jacobly0/llvm-project a139def90d26173f771eb1eca797633d1fbb2797)"
+	extern	__ishru
+	extern	__Unwind_SjLj_Register
+	extern	__Unwind_SjLj_Unregister
+	extern	__frameset
+	extern	__iand
+	extern	_os_FloatToReal
+	extern	__imulu
+	extern	__ltof
+	extern	_os_RealToStr
+	extern	__frameset0
+	extern	__ishrs
+	extern	__ishl
+	extern	__fmul
+	extern	__ftol
+	extern	__idivs
